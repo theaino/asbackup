@@ -7,6 +7,8 @@ import (
 	"os"
 	"strings"
 	"time"
+
+	"github.com/joho/godotenv"
 )
 
 type MoodDTO map[string]int
@@ -24,6 +26,8 @@ var saveDir string
 var interval time.Duration
 
 func main() {
+	godotenv.Load()
+
 	passwd := os.Getenv("ADM_PASSWD")
 	baseUrl = strings.TrimSuffix(os.Getenv("BASE_URL"), "/")
 
