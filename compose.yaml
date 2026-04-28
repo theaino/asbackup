@@ -7,4 +7,4 @@ services:
       BASE_URL: "https://aino-spring.com"
       SAVE_DIR: "/saves"
     volumes:
-      - saves:/saves
+      - ./saves:/saves
