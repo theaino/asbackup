@@ -1,0 +1,7 @@
+services:
+  asbackup:
+    build: .
+    restart: always
+    environment:
+      INTERVAL: "12h"
+      BASE_URL: "https://aino-spring.com"
